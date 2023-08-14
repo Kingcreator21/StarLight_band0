@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarLight</title>
+<link rel="stylesheet" href="style2.css">
+<link rel="opniao.js" href="">
+  
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  #content {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .button {
+    background-color: white;
+    color: blue;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #nao:hover {
+    position: absolute;
+    top: calc(100vh * Math.random());
+    left: calc(100vw * Math.random());
+  }
+</style>
+</head>
+<body>
+<div id="content">
+  <h2>Gostam da banda?</h2>
+  <button class="button" id="simBtn">Sim</button>
+  <button id="nao" class="button">Não</button>
+</div>
+<script>
+  const naoButton = document.getElementById('nao');
+  naoButton.addEventListener('mouseover', () => {
+    naoButton.style.position = 'absolute';
+    naoButton.style.top = `${Math.random() * 100}vh`;
+    naoButton.style.left = `${Math.random() * 100}vw`;
+  });
+</script>
+<div class="container">
+  </div>
+  <script src="opniao.js"></script>
+</body>
+</html>
